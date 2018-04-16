@@ -30,6 +30,7 @@
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
                     <span class="sr-only">Toggle Navigation</span>
                     <span class="icon-bar"></span>
+
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
@@ -44,6 +45,7 @@
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
                     <li>
+                        
                         <a href="/games">Matchs</a>
                     </li>
                     <li>

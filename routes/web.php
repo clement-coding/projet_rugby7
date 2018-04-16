@@ -1,9 +1,11 @@
 <?php
 Route::get('/', function () { return redirect('/home'); });
 Route::get('/home', 'GamesController@index');
+Route::get('/games', 'GamesController@index');
 Route::get('/teams', 'TeamsController@index');
 Route::get('/players/{team_id}', 'TeamsController@players');
 Route::get('/table', 'TableController@index');
+Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 // Authentication Routes...
 $this->get('login', 'Auth\LoginController@showLoginForm')->name('auth.login');

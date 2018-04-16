@@ -1,11 +1,14 @@
 @extends('layouts.front')
 
 @section('content')
+<a href="{{ url('/login') }}">Login</a>
+<a href="{{ url('/logout') }}">Logout</a>
 
 
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
+
                 <h1>Matchs à venir</h1>
 
                 <table class="table">
