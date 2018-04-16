@@ -11,8 +11,8 @@ class TeamsController extends Controller
 
     public function index()
     {
-        $teams = Team::all();
-        return view('front.teams', compact('teams'));
+      $teams = Team::all(); // Ca fetch toutes les datas dans team    
+        return view('front.teams')->with('teams', $teams);
     }
 
     public function players($team_id)

@@ -19,7 +19,7 @@ class Player extends Model
     use SoftDeletes;
 
     protected $fillable = ['name', 'surname', 'birth_date', 'team_id'];
-    
+
 
     /**
      * Set to null if empty
@@ -59,10 +59,10 @@ class Player extends Model
             return '';
         }
     }
-    
+
     public function team()
     {
         return $this->belongsTo(Team::class, 'team_id')->withTrashed();
     }
-    
+
 }

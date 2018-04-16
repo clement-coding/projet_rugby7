@@ -28,6 +28,18 @@
                             <th>@lang('quickadmin.players.fields.birth-date')</th>
                             <td>{{ $player->birth_date }}</td>
                         </tr>
+                        <tr>
+                            <th>@lang('quickadmin.players.fields.age')</th>
+                            <td>{{ $player->age }}</td>
+                        </tr>
+                        <tr>
+                            <th>@lang('quickadmin.players.fields.position')</th>
+                            <td>{{ $player->position }}</td>
+                        </tr>
+                        <tr>
+                            <th>@lang('quickadmin.players.fields.tries')</th>
+                            <td>{{ $player->tries }}</td>
+                        </tr>
                     </table>
                 </div>
             </div>

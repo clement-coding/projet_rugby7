@@ -20,7 +20,10 @@ class Create1496402870PlayersTable extends Migration
                 $table->string('name')->nullable();
                 $table->string('surname')->nullable();
                 $table->date('birth_date')->nullable();
-                
+                $table->integer('age')->nullable();
+                $table->string('position')->nullable();
+                $table->integer('tries')->nullable();
+
                 $table->timestamps();
                 $table->softDeletes();
 

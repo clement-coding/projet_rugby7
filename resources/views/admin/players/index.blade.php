@@ -5,7 +5,7 @@
     @can('player_create')
     <p>
         <a href="{{ route('admin.players.create') }}" class="btn btn-success">@lang('quickadmin.qa_add_new')</a>
-        
+
     </p>
     @endcan
 
@@ -26,10 +26,15 @@
                         <th>@lang('quickadmin.players.fields.name')</th>
                         <th>@lang('quickadmin.players.fields.surname')</th>
                         <th>@lang('quickadmin.players.fields.birth-date')</th>
+                        <th>@lang('quickadmin.players.fields.age')</th>
+                        <th>@lang('quickadmin.players.fields.position')</th>
+                        <th>@lang('quickadmin.players.fields.tries')</th>
+
+
                         <th>&nbsp;</th>
                     </tr>
                 </thead>
-                
+
                 <tbody>
                     @if (count($players) > 0)
                         @foreach ($players as $player)
@@ -42,6 +47,12 @@
                                 <td>{{ $player->name }}</td>
                                 <td>{{ $player->surname }}</td>
                                 <td>{{ $player->birth_date }}</td>
+                                <td>{{ $player->age }}</td>
+                                <td>{{ $player->position }}</td>
+                                <td>{{ $player->tries }}</td>
+
+
+
                                 <td>
                                     @can('player_view')
                                     <a href="{{ route('admin.players.show',[$player->id]) }}" class="btn btn-xs btn-primary">@lang('quickadmin.qa_view')</a>
@@ -72,7 +83,7 @@
     </div>
 @stop
 
-@section('javascript') 
+@section('javascript')
     <script>
         @can('player_delete')
             window.route_mass_crud_entries_destroy = '{{ route('admin.players.mass_destroy') }}';

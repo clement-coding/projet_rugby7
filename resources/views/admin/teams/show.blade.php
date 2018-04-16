@@ -15,12 +15,19 @@
                         <tr>
                             <th>@lang('quickadmin.teams.fields.name')</th>
                             <td>{{ $team->name }}</td>
+                            <td>{{ $team->nb_matches }}</td>
+                            <td>{{ $team->nb_wins }}</td>
+                            <td>{{ $team->nb_losses }}</td>
+                            <td>{{ $team->total_tries }}</td>
+                            <td>{{ $team->total_points }}</td>
+                            <td>{{ $team->placement }}</td>
+
                         </tr>
                     </table>
                 </div>
             </div><!-- Nav tabs -->
 <ul class="nav nav-tabs" role="tablist">
-    
+
 <li role="presentation" class="active"><a href="#players" aria-controls="players" role="tab" data-toggle="tab">Players</a></li>
 <li role="presentation" class=""><a href="#games" aria-controls="games" role="tab" data-toggle="tab">Games</a></li>
 <li role="presentation" class=""><a href="#games" aria-controls="games" role="tab" data-toggle="tab">Games</a></li>
@@ -28,7 +35,7 @@
 
 <!-- Tab panes -->
 <div class="tab-content">
-    
+
 <div role="tabpanel" class="tab-pane active" id="players">
 <table class="table table-bordered table-striped {{ count($players) > 0 ? 'datatable' : '' }}">
     <thead>

@@ -10,11 +10,21 @@
                     <tr>
                         <th>Nom</th>
                         <th>Date de naissance</th>
+                        <th>Age</th>
+                        <th>Position</th>
+                        <th>Tries</th>
+
+
+
                     </tr>
                     @forelse($players as $player)
                         <tr>
                             <td>{{ $player->name . ' ' . $player->surname }}</td>
                             <td>{{ $player->birth_date }}</td>
+                            <td>{{ $player->age }}</td>
+                            <td>{{ $player->position }}</td>
+                            <td>{{ $player->tries }}</td>
+
                         </tr>
                     @empty
                         <tr>

@@ -8,7 +8,7 @@
         <div class="panel-heading">
             @lang('quickadmin.qa_create')
         </div>
-        
+
         <div class="panel-body">
             <div class="row">
                 <div class="col-xs-12 form-group">
@@ -58,7 +58,44 @@
                     @endif
                 </div>
             </div>
-            
+            <div class="row">
+                <div class="col-xs-12 form-group">
+                    {!! Form::label('age', 'Age', ['class' => 'control-label']) !!}
+                    {!! Form::text('surname', old('age'), ['class' => 'form-control', 'placeholder' => '']) !!}
+                    <p class="help-block"></p>
+                    @if($errors->has('age'))
+                        <p class="help-block">
+                            {{ $errors->first('age') }}
+                        </p>
+                    @endif
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 form-group">
+                    {!! Form::label('position', 'Position', ['class' => 'control-label']) !!}
+                    {!! Form::text('position', old('position'), ['class' => 'form-control', 'placeholder' => '']) !!}
+                    <p class="help-block"></p>
+                    @if($errors->has('position'))
+                        <p class="help-block">
+                            {{ $errors->first('position') }}
+                        </p>
+                    @endif
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 form-group">
+                    {!! Form::label('tries', 'Tries', ['class' => 'control-label']) !!}
+                    {!! Form::text('tries', old('tries'), ['class' => 'form-control', 'placeholder' => '']) !!}
+                    <p class="help-block"></p>
+                    @if($errors->has('tries'))
+                        <p class="help-block">
+                            {{ $errors->first('tries') }}
+                        </p>
+                    @endif
+                </div>
+            </div>
+
+
         </div>
     </div>
 

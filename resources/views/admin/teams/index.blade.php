@@ -5,7 +5,7 @@
     @can('team_create')
     <p>
         <a href="{{ route('admin.teams.create') }}" class="btn btn-success">@lang('quickadmin.qa_add_new')</a>
-        
+
     </p>
     @endcan
 
@@ -23,10 +23,17 @@
                         @endcan
 
                         <th>@lang('quickadmin.teams.fields.name')</th>
+                        <th>@lang('quickadmin.teams.fields.nb_matches')</th>
+                        <th>@lang('quickadmin.teams.fields.nb_wins')</th>
+                        <th>@lang('quickadmin.teams.fields.nb_losses')</th>
+                        <th>@lang('quickadmin.teams.fields.total_tries')</th>
+                        <th>@lang('quickadmin.teams.fields.total_points')</th>
+                        <th>@lang('quickadmin.teams.fields.placement')</th>
+
                         <th>&nbsp;</th>
                     </tr>
                 </thead>
-                
+
                 <tbody>
                     @if (count($teams) > 0)
                         @foreach ($teams as $team)
@@ -36,6 +43,13 @@
                                 @endcan
 
                                 <td>{{ $team->name }}</td>
+                                <td>{{ $team->nb_matches }}</td>
+                                <td>{{ $team->nb_wins }}</td>
+                                <td>{{ $team->nb_losses }}</td>
+                                <td>{{ $team->total_tries }}</td>
+                                <td>{{ $team->total_points }}</td>
+                                <td>{{ $team->placement }}</td>
+
                                 <td>
                                     @can('team_view')
                                     <a href="{{ route('admin.teams.show',[$team->id]) }}" class="btn btn-xs btn-primary">@lang('quickadmin.qa_view')</a>
@@ -66,7 +80,7 @@
     </div>
 @stop
 
-@section('javascript') 
+@section('javascript')
     <script>
         @can('team_delete')
             window.route_mass_crud_entries_destroy = '{{ route('admin.teams.mass_destroy') }}';
