@@ -10,12 +10,14 @@
         "laravel/tinker": "~1.0",
         "laravelcollective/html": "^5.3",
         "intervention/image": "^2.3",
+        "floodedcodeboy/world-weather-online-laravel": "dev-master",
         "doctrine/dbal": "^2.5"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
         "mockery/mockery": "0.9.*",
         "phpunit/phpunit": "~5.7"
+        
     },
     "autoload": {
         "classmap": [

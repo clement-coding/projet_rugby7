@@ -19,7 +19,7 @@ class RolesController extends Controller
     public function index()
     {
         if (! Gate::allows('role_access')) {
-            return abort(401);
+           return abort(401);
         }
 
         $roles = Role::all();
